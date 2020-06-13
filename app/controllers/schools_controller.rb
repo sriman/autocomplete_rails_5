@@ -88,30 +88,4 @@ end
 
 
 
-#Add unique validation - done
-#root index to schools - done
-#fix persist the value in the search Query - done
-#Home button - done
-#add Index
-#place holder Text
-# curl -X GET \
-# -H "Content-type: application/json" \
-# -H "Accept: application/json" \
-# "http://localhost:3000/schools/search?query=a"
-
-
-#not found text
-#Design clean up in all the pages & good bg color, notice color
-#code review
-#Download Schools and add in Seed
-#Pagination
-#Remove unwanted files and name the file correctly
-#Add test case
-#Add read me
-#deploy in heroku
-#deploy in github
-#deploy in docker
-#add screenshots in the Github
-#breadcrumbs
-#validate sql injection
 

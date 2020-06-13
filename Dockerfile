@@ -14,8 +14,5 @@ RUN bundle install --deployment --without development test \
     && apt install -y nodejs
 RUN npm install yarn -g
 
-# Start the application server
-#ENTRYPOINT ['./entrypoint.sh']
-
 ENTRYPOINT [ "/bin/sh" ]
-CMD [ "./entrypoint.sh" ]
+CMD [ "/entrypoint.sh" ]

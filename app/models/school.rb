@@ -3,6 +3,6 @@ class School < ApplicationRecord
     validates :title, uniqueness: true
 
     def self.name_like(query)
-        where(["title ILIKE ?", "%#{query.strip}%"])
+        where(["title LIKE ?", "%#{query.strip}%"])
     end
 end

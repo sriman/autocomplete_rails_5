@@ -14667,3 +14667,28 @@ Processing by SchoolsController#index as HTML
 Completed 200 OK in 47ms (Views: 45.0ms | ActiveRecord: 0.4ms)
 
 
+Started GET "/" for ::1 at 2020-06-13 16:13:50 +0530
+  [1m[35m (2.2ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/sriman/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by SchoolsController#index as HTML
+  Rendering schools/index.html.erb within layouts/application
+  [1m[36mSchool Load (0.8ms)[0m  [1m[34mSELECT  `schools`.* FROM `schools` ORDER BY `schools`.`title` ASC LIMIT 10 OFFSET 0[0m
+  ↳ app/views/schools/_index.html.erb:10
+  Rendered schools/_index.html.erb (8.1ms)
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `schools`[0m
+  ↳ app/views/schools/index.html.erb:24
+  Rendered schools/index.html.erb within layouts/application (31.6ms)
+Completed 200 OK in 115ms (Views: 105.1ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/schools/search?query=aa" for ::1 at 2020-06-13 16:13:53 +0530
+Processing by SchoolsController#search as TEXT
+  Parameters: {"query"=>"aa"}
+  Rendering schools/search.json.jbuilder
+  [1m[36mSchool Load (0.4ms)[0m  [1m[34mSELECT `schools`.* FROM `schools` WHERE (title LIKE '%aa%')[0m
+  ↳ app/views/schools/search.json.jbuilder:1
+  Rendered schools/_school.json.jbuilder (0.8ms)
+  Rendered schools/search.json.jbuilder (7.2ms)
+Completed 200 OK in 44ms (Views: 27.7ms | ActiveRecord: 0.4ms)
+
+
