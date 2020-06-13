@@ -1,7 +1,7 @@
 version: '2'
 services:
   web:
-    image: autocomplete_app_v6
+    image: autocomplete_app_v1
     restart: always
     ports:
       - "8088:3000"
