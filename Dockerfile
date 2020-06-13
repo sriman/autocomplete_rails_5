@@ -15,4 +15,4 @@ RUN bundle install --deployment --without development test \
 RUN npm install yarn -g
 
 ENTRYPOINT [ "/bin/sh" ]
-CMD [ "/entrypoint.sh" ]
+CMD [ "./entrypoint.sh" ]
