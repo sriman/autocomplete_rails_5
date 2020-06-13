@@ -17,7 +17,7 @@ This project is all about searching and finding the schools all over the world, 
 
 * Docker-Compose: 1.23.2
 
-#Installation Prequesties:
+# Installation Prequesties:
 
 As the application is docker supported, it can be run using the docker compose tool. From here we will be guiding you on installing the application in the Mac OS
 
