@@ -17,7 +17,7 @@ This project is all about searching and finding the schools all over the world, 
 
 * Docker-Compose: 1.23.2
 
-#Installation Prequesties:
+# Installation Prequesties:
 
 As the application is docker supported, it can be run using the docker compose tool. From here we will be guiding you on installing the application in the Mac OS
 
@@ -43,6 +43,7 @@ Once docker is installed clone the application in your local system by
 
 ## Sample Data load in the database
 `docker exec -it <app name> bash`
+
 `rake db:migrate && rake db:seed`
 
 Now the application runs in the http://localhost:8088 
@@ -58,6 +59,7 @@ Now the application runs in the http://localhost:8088
 # Happy Coding!
 
 
+![alt text](https://i.ibb.co/ydSK6R6/Screenshot-2020-06-13-at-6-08-53-PM.png)
 
 
 
