@@ -34,7 +34,7 @@ Once docker is installed clone the application in your local system by
 `git clone git@github.com:sriman/autocomplete_rails_5.git`
 `cd autocomplete_rails_5`
 
-## build the application
+## Build the application
 
 `docker build -t autocomplete_app_v1 .`
 
