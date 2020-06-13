@@ -43,6 +43,7 @@ Once docker is installed clone the application in your local system by
 
 ## Sample Data load in the database
 `docker exec -it <app name> bash`
+
 `rake db:migrate && rake db:seed`
 
 Now the application runs in the http://localhost:8088 
