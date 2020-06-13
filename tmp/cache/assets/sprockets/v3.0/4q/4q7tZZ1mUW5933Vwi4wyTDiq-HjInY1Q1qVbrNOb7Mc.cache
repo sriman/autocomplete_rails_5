@@ -1,0 +1,34 @@
+I"(function() {
+  $(function() {
+    'use strict';
+    $('#autocomplete-dynamic').autocomplete({
+      serviceUrl: '/schools/search/' + $('#autocomplete-dynamic').val() + '.json',
+      lookupFilter: function(suggestion, originalQuery, queryLowerCase) {
+        var re;
+        re = new RegExp('\\b' + $.Autocomplete.utils.escapeRegExChars(queryLowerCase), 'gi');
+        return re.test(suggestion.value);
+      },
+      onSelect: function(suggestion) {
+        $('#selction-ajax').html('You selected: ' + suggestion.value + ', ' + suggestion.data);
+      },
+      onHint: function(hint) {
+        $('#autocomplete-ajax-x').val(hint);
+      },
+      onInvalidateSelection: function() {
+        $('#selction-ajax').html('You selected: none');
+      },
+      transformResult: function(response) {
+        return {
+          suggestions: $.map(JSON.parse(response), function(dataItem) {
+            return {
+              value: dataItem.title,
+              data: dataItem.id
+            };
+          })
+        };
+      }
+    });
+  });
+
+}).call(this);
+:ET

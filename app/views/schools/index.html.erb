@@ -1,0 +1,26 @@
+<div class="container">
+<p id="notice"><%= notice %></p>
+
+
+<div class="d-flex justify-content-between">
+<h1><%= link_to 'Schools', root_path %></h1>
+<div class='pull-right'><%= link_to 'Add New School', new_school_path %></div>
+</div>
+<br>
+
+<div class="d-flex justify-content-between">
+<%= form_tag("/schools", method: "get", style: 'width:100%') do %>
+  
+  <div><%= text_field_tag :query, params[:query], id: "autocomplete-dynamic", placeholder: "Type in at least 2 letters to begin the autocomplete process.", style:"width: 85%; border-width: 5px;" %></div>
+  
+  <div><%= submit_tag("Search", class: "justify-content-center") %></div>
+  
+<% end %>
+</div>
+
+<br><br>
+<%= render 'index', schools: @schools %>
+<div class='float-right'>
+<%= paginate @schools %></div>
+
+</div>
