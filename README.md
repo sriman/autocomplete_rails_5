@@ -41,7 +41,12 @@ Once docker is installed clone the application in your local system by
 ## Run the application
 `docker-compose -up -d`
 
+## Sample Data load in the database
+`docker exec -it <app name> bash`
+`rake db:migrate && rake db:seed`
+
 Now the application runs in the http://localhost:8088 
+
 
 ## curl request for search from the server hosted in the HEROKU
 

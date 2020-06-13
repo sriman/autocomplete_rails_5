@@ -13,6 +13,7 @@ RUN bundle install --deployment --without development test \
     && curl -sL https://deb.nodesource.com/setup_10.x | bash - \
     && apt install -y nodejs
 RUN npm install yarn -g
+RUN chmod +x entrypoint.sh
 
 ENTRYPOINT [ "/bin/sh" ]
-CMD [ "./entrypoint.sh" ]
+CMD [ "entrypoint.sh" ]
