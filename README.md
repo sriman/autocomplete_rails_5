@@ -60,7 +60,6 @@ Now the application runs in the http://localhost:8088
 
 
 ![alt text](https://i.ibb.co/ydSK6R6/Screenshot-2020-06-13-at-6-08-53-PM.png)
-![alt text](https://i.ibb.co/ydSK6R6/Screenshot-2020-06-13-at-6-08-53-PM.png?raw=true)
 
 
 
